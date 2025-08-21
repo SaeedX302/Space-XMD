@@ -2,42 +2,52 @@
 
 const axios = require('axios');
 
-// Replace with your Imgflip username and password
-const IMGFLIP_USERNAME = tsuncca19@edumail.edu.rs;
-const IMGFLIP_PASSWORD = @1234567#;
-
 module.exports = {
   name: 'meme',
-  description: 'Generates a meme with the given text.',
+  description: 'Creates a meme with custom text on a popular template.',
   async execute(message, args) {
-    const [templateId, topText, bottomText] = args;
-
-    if (!templateId || !topText || !bottomText) {
-      return message.reply('Please provide a template ID, top text, and bottom text. \nExample: `!meme 102156234 "Top Text" "Bottom Text"`');
-    }
-
     try {
+      const memeArgs = args.join(' ').split(';');
+      if (memeArgs.length < 2) {
+        return message.reply('Invalid format! Use: !meme <template_name>;<text1>;<text2>');
+      }
+
+      const templateName = memeArgs[0].trim().toLowerCase();
+      const text1 = memeArgs[1].trim();
+      const text2 = memeArgs.length > 2 ? memeArgs[2].trim() : '';
+
+      // Get meme templates
+      const response = await axios.get('https://api.imgflip.com/get_memes');
+      const memes = response.data.data.memes;
+
+      // Find the template
+      const template = memes.find(m => m.name.toLowerCase().includes(templateName));
+      if (!template) {
+        return message.reply(`Template "${templateName}" not found. Try another one!`);
+      }
+
+      // Create the meme
       const params = new URLSearchParams();
-      params.append('template_id', templateId);
-      params.append('username', IMGFLIP_USERNAME);
-      params.append('password', IMGFLIP_PASSWORD);
-      params.append('text0', topText);
-      params.append('text1', bottomText);
+      params.append('template_id', template.id);
+      params.append('username', process.env.IMGFLIP_USERNAME);
+      params.append('password', process.env.IMGFLIP_PASSWORD);
+      params.append('text0', text1);
+      params.append('text1', text2);
 
-      const response = await axios.post('https://api.imgflip.com/caption_image', params);
-      const { data } = response.data;
+      const memeResponse = await axios.post('https://api.imgflip.com/caption_image', params);
+      const memeData = memeResponse.data;
 
-      if (data.url) {
+      if (memeData.success) {
         message.reply({
-          image: { url: data.url },
-          caption: 'Here is your meme!',
+          image: { url: memeData.data.url },
+          caption: `Here's your meme, master! ✨`
         });
       } else {
-        message.reply('Sorry, I couldn\'t generate the meme. Please check the template ID.');
+        message.reply(`Oops! Something went wrong: ${memeData.error_message}`);
       }
     } catch (error) {
-      console.error('Error generating meme:', error);
-      message.reply('Sorry, there was an error generating the meme. Please try again later.');
+      console.error(error);
+      message.reply('Sorry, I couldn\'t create the meme. 😔');
     }
   },
 };
