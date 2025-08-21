@@ -1,35 +1,29 @@
-# 🚀 Space XMD  
+# 🚀 Space XMD WhatsApp Bot 🤖
 
 <p align="center">
-  <img src="https://i.gifer.com/77b0.gif" width="250" alt="Space Online Animation"/>
+  <img src="https://raw.githubusercontent.com/saeedx302/space-xmd/main/SpaceMedia/spacelogo.jpg" width="250" alt="Space XMD Logo"/>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Under_Maintenance-orange?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge"/>
+  <i>A powerful and feature-rich WhatsApp bot designed to enhance your messaging experience. 🌌</i>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Under_Maintenance-orange?style=for-the-badge&logo=rocket"/>
+  <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge&logo=whatsapp"/>
+  <img src="https://img.shields.io/github/license/saeedx302/space-xmd?style=for-the-badge&logo=github"/>
   <img src="https://img.shields.io/badge/Developed_By-Iconic_Tech-purple?style=for-the-badge"/>
 </p>
 
 ---
 
-## 🎯 Quick Actions  
+## 📖 Description
 
-<p align="center">
-  <a href="https://tinyurl.com/253tajve">
-    <img src="https://img.shields.io/badge/🚀 Deploy-Real-success?style=for-the-badge&logo=rocket"/>
-  </a>
-  <a href="#last-update">
-    <img src="https://img.shields.io/badge/🛠️ Last_Update-20_Aug_2025-blue?style=for-the-badge&logo=github"/>
-  </a>
-  <a href="https://whatsapp.com/channel/0029ValX2Js9RZAVtDgMYj0r">
-    <img src="https://img.shields.io/badge/💬 Support-Channels-brightgreen?style=for-the-badge&logo=whatsapp"/>
-  </a>
-</p>
+✨ **Space XMD** has been reborn!  reborn This WhatsApp bot is designed to bring a universe of features to your fingertips. 🌠 From fun and games to utility and moderation, Space XMD is your all-in-one solution for a smarter and more engaging WhatsApp experience.
 
 ---
 
-## 📸 Preview  
+## 📸 Preview
 
 <p align="center">
   <img src="https://files.catbox.moe/9gz0cx.jpg" width="400"/>
@@ -38,52 +32,44 @@
 
 ---
 
-## 📖 Description  
+## ✨ Features
 
-✨ **Space XMD** has just been **reborn**.  
-Enjoy **fantastic commands** and **free deployment** under a **modern and smart design**.  
-
----
-
-## ⚠️ Current Status  
-
-🚧 **Under Maintenance**  
-New features and improvements are on the way. Stay tuned!  
+-   **Fast & Reliable:** Built for speed and stability. ⚡
+-   **Clean & Professional:** A user-friendly and aesthetically pleasing design. 🎨
+-   **Free to Deploy:** Get your own instance up and running in minutes. 💸
+-   **Regular Updates:** Continuously evolving with new features and improvements. 🔄
+-   **Trusted Development:** Backed by Iconic Tech. 👨‍💻
 
 ---
 
-## 🚀 Getting Started  
+## 🚀 Getting Started
 
-1. Visit 👉 [Deploy Link](https://tinyurl.com/253tajve)  
-2. Follow the on-screen instructions  
-3. Complete registration and enjoy 🚀  
-
----
-
-## 🔔 Stay Updated  
-
-- 📢 [Official WhatsApp Channel](https://whatsapp.com/channel/0029ValX2Js9RZAVtDgMYj0r)  
+1.  **Deploy the Bot:** Visit 👉 [Deployment Link](https://tinyurl.com/253tajve)
+2.  **Follow Instructions:** Complete the on-screen setup process.
+3.  **Enjoy!** 🎉
 
 ---
 
-## ✨ Features  
+## 🛠️ Technologies Used
 
-- Fast & reliable WhatsApp bot  
-- Clean & professional design  
-- Free deployment  
-- Regular updates  
-- Trusted development  
-
----
-
-## 🤝 Support  
-
-For any issues, join the **Support Channels** above or contact **Iconic Tech** directly.  
+-   **Node.js:** The core runtime environment.
+-   **Baileys:** WhatsApp Web API.
+-   **Axios:** For making HTTP requests.
+-   **FFmpeg:** For media manipulation.
+-   And many more! See `package.json` for a full list of dependencies.
 
 ---
 
-<p align="center">
-  💡 Developed with ❤️ by <b>Iconic Tech</b>
-</p>
+## 🤝 Support
+
+For any issues, questions, or suggestions, please join our support channels:
+
+-   📢 [Official WhatsApp Channel](https://whatsapp.com/channel/0029ValX2Js9RZAVtDgMYj0r)
+
+---
+
+## 👨‍💻 Developer
+
+Developed with ❤️ by **Iconic Tech**.
 
 ---
